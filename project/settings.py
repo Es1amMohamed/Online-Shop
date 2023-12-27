@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     # My apps
     "online_shop",
     "django_summernote",
+    "cart",
 ]
 
 MIDDLEWARE = [
@@ -48,6 +49,8 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
+
+CART_SESSION_ID = "cart"
 
 ROOT_URLCONF = "project.urls"
 
@@ -124,3 +127,11 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+STATIC_URL = "static/"
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+]
+
+MEDIA_ROOT = BASE_DIR / "media"
+MEDIA_URL = "media/"
